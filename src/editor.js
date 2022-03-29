@@ -45,7 +45,7 @@ function Editor({setEditor, setDataHTML}){
                     <i className="bi bi-x-lg" style={{color:'red'}}></i>
                 </div>
             </div>
-            <div className="contentEditable" ref={edit} contentEditable={true} onPaste={(e)=>{CaptureData(e)}} onKeyUp={(e)=>{CaptureData(e)}} onBlur={saveSel}>
+            <div className="contentEditable" ref={edit} contentEditable={true} onMouseUp={(e)=>{CaptureData(e)}} onPaste={(e)=>{CaptureData(e)}} onKeyUp={(e)=>{CaptureData(e)}} onBlur={saveSel}>
                 <div>Escribe aqui</div>
             </div>
             <div className="footer auto-grid">
