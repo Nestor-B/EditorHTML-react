@@ -46,7 +46,7 @@ function Editor({setEditor, setDataHTML}){
                 </div>
             </div>
             <div className="contentEditable" ref={edit} contentEditable={true} onPaste={(e)=>{CaptureData(e)}} onKeyUp={(e)=>{CaptureData(e)}} onBlur={saveSel}>
-
+                <div>Escribe aqui</div>
             </div>
             <div className="footer auto-grid">
                 <div className="bi" onClick={()=>{execC('bold', false, null)}}> 
