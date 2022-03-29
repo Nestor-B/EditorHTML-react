@@ -4,8 +4,9 @@ function Editor({setEditor, setDataHTML}){
     const edit = React.useRef()
     function CaptureData(event){
         setTimeout((e)=>{
+	     edit.current.focus()
             setDataHTML(e.target.innerHTML)
-        }, 300, event)
+        }, 500, event)
     }
     var savedRange;
     function restoreSel() {
@@ -45,7 +46,7 @@ function Editor({setEditor, setDataHTML}){
                     <i className="bi bi-x-lg" style={{color:'red'}}></i>
                 </div>
             </div>
-            <div className="contentEditable" ref={edit} contentEditable={true} onMouseUp={(e)=>{CaptureData(e)}} onPaste={(e)=>{CaptureData(e)}} onKeyUp={(e)=>{CaptureData(e)}} onBlur={saveSel}>
+            <div className="contentEditable" ref={edit} contentEditable={true} onPaste={(e)=>{CaptureData(e)}} onKeyUp={(e)=>{CaptureData(e)}} onBlur={saveSel}>
                 <div>Escribe aqui</div>
             </div>
             <div className="footer auto-grid">
