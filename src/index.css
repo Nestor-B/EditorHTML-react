@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.bi {cursor: pointer;font-size: 22px;}
+
+/* No obligatorio */
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+/* No obligatorio */
+.container .wrapper {
+    max-width: 1000px;
+    margin: auto;
+} 
+
+.modalEditor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    align-items: center;
+}
+
+.modalEditor .editor {
+    min-width: 450px;
+    max-width: 70%;
+    min-height: 250px;
+    max-height: 60%;
+    box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-color: white !important;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    resize:both;
+    overflow: hidden;
+}
+.modalEditor .contentEditable {
+    position: relative;
+    padding: 1em;
+    max-height: 100%;
+    overflow-y: auto;
+}
+.modalEditor .editor *{
+    outline: 0;
+    border: 0;
+}
+.modalEditor .editor .header{
+    background-color: rgb(212, 209, 209);
+    overflow: hidden;
+}
+.modalEditor .editor .auto-grid, .editor .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalEditor .editor .header div{padding: 1em 2em;}
+.modalEditor .editor .auto-grid div{
+    background-color: rgb(212, 209, 209);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.modalEditor .editor .auto-grid div:nth-child(1){background-color: rgb(212, 209, 209);}
